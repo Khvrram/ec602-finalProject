@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "syllabus-calendar"
+version = "0.1.0"
+description = "Read a syllabus, find dates, and save JSON."
+requires-python = ">=3.14"
+dependencies = ["pypdf", "pypdfium2", "rapidocr", "onnxruntime", "Pillow"]
+
+[tool.setuptools]
+py-modules = ["syllabus_calendar"]
+
+[dependency-groups]
+dev = ["pytest", "ty"]
+
+[tool.pytest.ini_options]
+testpaths = ["test_syllabus_calendar.py"]
